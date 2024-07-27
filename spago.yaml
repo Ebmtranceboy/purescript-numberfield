@@ -19,14 +19,12 @@ package:
       - effect
     main: Test.Main
   publish:
-    version: 0.2.0
+    version: 0.2.1
     license: MIT
     location:
       githubOwner: Ebmtranceboy
       githubRepo: purescript-numberfield
 workspace:
-  package_set:
-    registry: 53.3.1
-  extra_packages:
-    sparse-polynomials: 3.0.0
-    sparse-matrices: 2.0.0
+  packageSet:
+    registry: 55.3.0
+  extraPackages: {}
