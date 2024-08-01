@@ -613,6 +613,22 @@ generate arr =
 trim :: Permutation -> Permutation
 trim (Product xs) = Product $ filter (\(Cycle cs) -> length cs > 1) xs
 
+-- |
+-- | Presentation of the Symmetric Group of order n
+-- | as an array of product of disjoint cycles.
+-- |
+symmetric :: Int -> Array Permutation
+symmetric n = 
+  trim <$>
+  abelize <$> 
+    toUnfoldable 
+      ( generate $ 
+          Set.fromFoldable 
+            [ Product [Cycle [0,1]]
+            , Product [Cycle $ 0..(n-1)]
+            ]
+      )
+
 -- | Returns the number of permutations 
 -- | compound of products of exactly k disjoint cycles
 -- | over n elements.

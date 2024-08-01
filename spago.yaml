@@ -19,12 +19,12 @@ package:
       - effect
     main: Test.Main
   publish:
-    version: 0.2.1
+    version: 0.2.2
     license: MIT
     location:
       githubOwner: Ebmtranceboy
       githubRepo: purescript-numberfield
 workspace:
   packageSet:
-    registry: 55.3.0
+    registry: 56.2.0
   extraPackages: {}
